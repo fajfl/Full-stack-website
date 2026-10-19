@@ -1,0 +1,8 @@
+.env
+.env.*
+*.log
+*.class
+*.war
+target/
+.idea/
+.metadata/

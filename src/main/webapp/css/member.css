@@ -1,0 +1,190 @@
+﻿/* NBA卡包商城 會員登入/註冊頁 - 精簡現代響應式樣式 */
+
+body {
+    font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+    max-width: 420px;
+    width: 100%;
+    padding: 32px 28px 24px 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-tabs {
+    display: flex;
+    background: #f4f6fb;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 14px 0;
+    border: none;
+    background: transparent;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active {
+    background: linear-gradient(90deg, #667eea 60%, #764ba2 100%);
+    color: #fff;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 15px 14px 15px 40px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafbff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px #667eea22;
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: #999;
+    pointer-events: none;
+}
+
+.input-wrapper label {
+    position: absolute;
+    left: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.95rem;
+    pointer-events: none;
+    background: transparent;
+}
+
+.input-wrapper input:focus + label,
+.input-wrapper input:not(:placeholder-shown) + label,
+.input-wrapper textarea:focus + label,
+.input-wrapper textarea:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 34px;
+    font-size: 0.8rem;
+    color: #667eea;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.modern-btn {
+    width: 100%;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #667eea 60%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px #667eea22;
+}
+
+.modern-btn:hover {
+    box-shadow: 0 6px 18px #667eea33;
+    transform: translateY(-2px);
+}
+
+.alert {
+    padding: 12px 18px;
+    border-radius: 7px;
+    margin-bottom: 18px;
+    font-size: 0.98rem;
+    text-align: center;
+}
+
+.alert-success {
+    background: #e6f9f0;
+    color: #1e7e34;
+    border-left: 4px solid #28a745;
+}
+
+.alert-error {
+    background: #fbeaea;
+    color: #c82333;
+    border-left: 4px solid #dc3545;
+}
+
+.alert-warning {
+    background: #fffbe6;
+    color: #856404;
+    border-left: 4px solid #ffc107;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .auth-wrapper {
+        padding: 10px;
+    }
+    .auth-container {
+        padding: 18px 6px 12px 6px;
+        max-width: 98vw;
+        border-radius: 10px;
+    }
+    .auth-tabs {
+        margin-bottom: 18px;
+    }
+    .modern-btn {
+        font-size: 1rem;
+        padding: 13px 0;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
